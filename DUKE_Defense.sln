@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{560F3741-ABE4-97AF-21AE-325AA4509862}") = "DUKE_Defense", "Assembly-CSharp-firstpass.csproj", "{08DBA4FA-5E82-0988-8387-9059BF0336C9}"
+EndProject
+Project("{560F3741-ABE4-97AF-21AE-325AA4509862}") = "DUKE_Defense", "Assembly-CSharp.csproj", "{A72120DE-7C42-127B-64C6-60BAA6AA3F05}"
+EndProject
+Project("{560F3741-ABE4-97AF-21AE-325AA4509862}") = "DUKE_Defense", "Assembly-CSharp-Editor.csproj", "{61734CCE-6B77-3E03-7994-F45440BC0C1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08DBA4FA-5E82-0988-8387-9059BF0336C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08DBA4FA-5E82-0988-8387-9059BF0336C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08DBA4FA-5E82-0988-8387-9059BF0336C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08DBA4FA-5E82-0988-8387-9059BF0336C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72120DE-7C42-127B-64C6-60BAA6AA3F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72120DE-7C42-127B-64C6-60BAA6AA3F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72120DE-7C42-127B-64C6-60BAA6AA3F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72120DE-7C42-127B-64C6-60BAA6AA3F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61734CCE-6B77-3E03-7994-F45440BC0C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61734CCE-6B77-3E03-7994-F45440BC0C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61734CCE-6B77-3E03-7994-F45440BC0C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61734CCE-6B77-3E03-7994-F45440BC0C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

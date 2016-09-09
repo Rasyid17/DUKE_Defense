@@ -29,7 +29,7 @@
             }
         }
 
-        public float maxWalkSpeed = 3f;
+        public float maxWalkSpeed = 0.1f;
         public float deceleration = 0.1f;
 
         private SteamVR_ControllerManager controllerManager;
@@ -120,14 +120,13 @@
         private void Move()
         {
             //var movement = playerPresence.GetHeadset().forward * movementSpeed * Time.deltaTime;
-			Debug.Log(controllerManager.left.gameObject.transform.rotation.eulerAngles.normalized);
-			Vector3 direction = controllerManager.left.gameObject.transform.rotation.eulerAngles.normalized;
-			Vector3 flatdir = new Vector3 (direction [0], 0, direction [2]);
-			Vector3 moveVec = movementSpeed * flatdir;
-			Vector3 strafeVec = Vector3.zero;//strafeSpeed * flatdir;
+			Transform controllerTrans = controllerManager.left.gameObject.transform;
+			float direction = Mathf.Deg2Rad * controllerManager.left.gameObject.transform.rotation.eulerAngles.y;
+			Vector3 moveVec = new Vector3 (movementSpeed * Mathf.Sin(direction), 0, movementSpeed * Mathf.Cos(direction));
+			Vector3 strafeVec = new Vector3 (strafeSpeed * Mathf.Sin(direction+90), 0, strafeSpeed * Mathf.Cos(direction+90));
 			//var strafe = playerPresence.GetHeadset().right * strafeSpeed * Time.deltaTime;
             float fixY = transform.position.y;
-			transform.position += (moveVec + strafeVec);
+			transform.position += (moveVec + strafeVec) * Time.deltaTime;
             transform.position = new Vector3(transform.position.x, fixY, transform.position.z);
         }
 
