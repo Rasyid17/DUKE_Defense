@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/testingfloor.unity
+- path: Assets/Scene/mockLevel.unity
   isLoaded: 1
   isActive: 1

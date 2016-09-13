@@ -59,10 +59,12 @@
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_Overlay.shader" />
      <None Include="Assets\Addons\XWeaponTrail\readme.txt" />
      <None Include="Assets\Addons\Vive-Teleporter\Shader\FadeBlack.shader" />
+     <None Include="Assets\Elementals\Readme.txt" />
      <None Include="Assets\Addons\VolumetricLines\Shaders\VolumetricLineShaderAdditiveFast.shader" />
      <None Include="Assets\Addons\XWeaponTrail\Model\readme.txt" />
      <None Include="Assets\Addons\Unity Set Builder\Apocalyptic City\AlphaTest-DiffuseDoublesided.shader" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_Blit.shader" />
+     <None Include="Assets\Addons\Chronos\Readme.txt" />
      <None Include="Assets\Addons\Vive-Teleporter\README.txt" />
      <None Include="Assets\Addons\Vive-Teleporter\LICENCE.txt" />
      <None Include="Assets\Addons\VolumetricLines\Shaders\VolumetricLineStripShaderAdditive.shader" />

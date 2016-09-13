@@ -1,21 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="DUKE_Defense" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True" />
-            <Node name="Assembly-CSharp-firstpass" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="DUKE_Defense" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Enemy.cs">
+    <Files>
+      <File FileName="Assets\Script\EnemyZombie_TrainingMap1.cs" Line="343" Column="6" />
+      <File FileName="Assets\Script\Enemy.cs" Line="129" Column="10" />
+      <File FileName="Assets\Script\DeviceHealth.cs" Line="48" Column="4" />
+      <File FileName="Assets\Script\PlayerHealthNewChar.cs" Line="173" Column="3" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
