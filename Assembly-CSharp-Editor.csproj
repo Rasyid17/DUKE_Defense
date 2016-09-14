@@ -45,6 +45,48 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Controls\Editor\Extensions.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Controls\Editor\PopupGUI.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Controls\Editor\PopupOption.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Reflection\Editor\AnimatorParameterDrawer.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Reflection\Editor\Extensions.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Reflection\Editor\TargetedDrawer.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Reflection\Editor\UnityMemberDrawer.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Reflection\Editor\UnityMethodDrawer.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Reflection\Editor\UnityObjectType.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\Reflection\Editor\UnityVariableDrawer.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\ElementAdderMenuBuilder.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\ElementAdderMenuCommandAttribute.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\ElementAdderMeta.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\GenericElementAdderMenu.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\GenericElementAdderMenuBuilder.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\IElementAdder.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\IElementAdderMenu.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\IElementAdderMenuBuilder.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Element Adder Menu\IElementAdderMenuCommand.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\GenericListAdaptor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\IReorderableListAdaptor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\IReorderableListDropTarget.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Internal\GUIHelper.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Internal\ReorderableListResources.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\Internal\SerializedPropertyUtility.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\ReorderableListControl.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\ReorderableListEvents.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\ReorderableListFlags.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\ReorderableListGUI.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\ReorderableListStyles.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Dependencies\ReorderableList\Editor\SerializedPropertyAdaptor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\AreaClock2DEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\AreaClock3DEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\AreaClockEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\ClockEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\CustomRecorderEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\GlobalClockDrawer.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\GlobalClockEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\LocalClockEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\TimekeeperEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Editor\TimelineEditor.cs" />
+     <Compile Include="Assets\Addons\Chronos\Source\Utilities\Editor\AddonDetector.cs" />
      <Compile Include="Assets\Addons\SteamVR\Editor\SteamVR_Editor.cs" />
      <Compile Include="Assets\Addons\SteamVR\Editor\SteamVR_RenderModelEditor.cs" />
      <Compile Include="Assets\Addons\SteamVR\Editor\SteamVR_Settings.cs" />
@@ -68,10 +110,12 @@
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_Overlay.shader" />
      <None Include="Assets\Addons\XWeaponTrail\readme.txt" />
      <None Include="Assets\Addons\Vive-Teleporter\Shader\FadeBlack.shader" />
+     <None Include="Assets\Elementals\Readme.txt" />
      <None Include="Assets\Addons\VolumetricLines\Shaders\VolumetricLineShaderAdditiveFast.shader" />
      <None Include="Assets\Addons\XWeaponTrail\Model\readme.txt" />
      <None Include="Assets\Addons\Unity Set Builder\Apocalyptic City\AlphaTest-DiffuseDoublesided.shader" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_Blit.shader" />
+     <None Include="Assets\Addons\Chronos\Readme.txt" />
      <None Include="Assets\Addons\Vive-Teleporter\README.txt" />
      <None Include="Assets\Addons\Vive-Teleporter\LICENCE.txt" />
      <None Include="Assets\Addons\VolumetricLines\Shaders\VolumetricLineStripShaderAdditive.shader" />
@@ -121,6 +165,8 @@
       <Project>{08DBA4FA-5E82-0988-8387-9059BF0336C9}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{A72120DE-7C42-127B-64C6-60BAA6AA3F05}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript.unityproj">
+      <Project>{0C64E16F-1927-8D56-4AB3-D920B348CE62}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
