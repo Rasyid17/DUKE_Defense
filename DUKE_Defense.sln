@@ -7,8 +7,6 @@ Project("{560F3741-ABE4-97AF-21AE-325AA4509862}") = "DUKE_Defense", "Assembly-CS
 EndProject
 Project("{560F3741-ABE4-97AF-21AE-325AA4509862}") = "DUKE_Defense", "Assembly-CSharp-Editor.csproj", "{61734CCE-6B77-3E03-7994-F45440BC0C1C}"
 EndProject
-Project("{560F3741-ABE4-97AF-21AE-325AA4509862}") = "DUKE_Defense", "Assembly-UnityScript.unityproj", "{0C64E16F-1927-8D56-4AB3-D920B348CE62}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{61734CCE-6B77-3E03-7994-F45440BC0C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61734CCE-6B77-3E03-7994-F45440BC0C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61734CCE-6B77-3E03-7994-F45440BC0C1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C64E16F-1927-8D56-4AB3-D920B348CE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C64E16F-1927-8D56-4AB3-D920B348CE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C64E16F-1927-8D56-4AB3-D920B348CE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C64E16F-1927-8D56-4AB3-D920B348CE62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
