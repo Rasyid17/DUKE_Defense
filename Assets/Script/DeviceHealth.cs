@@ -20,6 +20,8 @@ public class DeviceHealth : MonoBehaviour {
 
 	void Awake () {
 	
+		currentHealth = startingHealth;
+
 		ZombiesAll = GameObject.FindGameObjectsWithTag("Enemy");
 
 		ZombieNavMesh = new NavMeshAgent[ZombiesAll.Length];
@@ -50,16 +52,24 @@ public class DeviceHealth : MonoBehaviour {
 			PlayerIsDead = true;
 			gameObject.GetComponent<DeviceHealth>().enabled = false;
 		}
-		//======================================================
-		if(currentHealth <= 40)
+
+	}
+
+	public void remove(float amount) { //animation when damaged
+		if (currentHealth != MinHealth)
 		{
-			
-		}
-		else
-		{
-			
+			currentHealth -= amount;
 		}
 
+		hurtfx.SetActive (true);
+		StartCoroutine (Hurt());
+	}
+
+	IEnumerator Hurt()
+
+	{
+		yield return new WaitForSeconds (0.5f);
+		hurtfx.SetActive (false);
 	}
 
 }

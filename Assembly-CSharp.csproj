@@ -275,12 +275,14 @@
      <Compile Include="Assets\Addons\XWeaponTrail\Scripts\XWeaponTrail.cs" />
      <Compile Include="Assets\Addons\XWeaponTrail\Scripts\XWeaponTrailDemo.cs" />
      <Compile Include="Assets\Elementals\Demo\Scripts\GE_Elementals_Demo.cs" />
+     <Compile Include="Assets\Script\BulletHit.cs" />
      <Compile Include="Assets\Script\CustomText.cs" />
      <Compile Include="Assets\Script\DeviceHealth.cs" />
      <Compile Include="Assets\Script\Enemy.cs" />
      <Compile Include="Assets\Script\EnemyZombie_TrainingMap.cs" />
      <Compile Include="Assets\Script\EnemyZombie_TrainingMap1.cs" />
      <Compile Include="Assets\Script\HealthManager.cs" />
+     <Compile Include="Assets\Script\HolsterTracking.cs" />
      <Compile Include="Assets\Script\LaserGunShotBehaviour.cs" />
      <Compile Include="Assets\Script\Lerp.cs" />
      <Compile Include="Assets\Script\PauseScript.cs" />
@@ -290,6 +292,8 @@
      <Compile Include="Assets\Script\scoreManager1.cs" />
      <Compile Include="Assets\Script\testing.cs" />
      <None Include="Assets\Addons\SteamVR_Unity_Toolkit\Version.txt" />
+     <None Include="Assets\Addons\Shipping Container Environment\Readme.txt" />
+     <None Include="Assets\Addons\Rocks and Boulders 2\Shaders\shader info.txt" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_BlitFlip.shader" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_ClearAll.shader" />
@@ -301,6 +305,7 @@
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_HiddenArea.shader" />
      <None Include="Assets\Addons\SteamVR_Unity_Toolkit\Scripts\Shaders\UIOverlay.shader" />
      <None Include="Assets\Addons\Vive-Teleporter\Shader\ViveMovementGrid.shader" />
+     <None Include="Assets\Addons\Rocks and Boulders 2\readme.txt" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_Overlay.shader" />
      <None Include="Assets\Addons\Rocks and Boulders 2\readme.txt" />
      <None Include="Assets\Addons\Shipping Container Environment\Readme.txt" />
@@ -311,12 +316,14 @@
      <None Include="Assets\Addons\XWeaponTrail\Model\readme.txt" />
      <None Include="Assets\Addons\Unity Set Builder\Apocalyptic City\AlphaTest-DiffuseDoublesided.shader" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_Blit.shader" />
+     <None Include="Assets\Addons\Realistic Military Vehicles\READ_ME.txt" />
      <None Include="Assets\Addons\Chronos\Readme.txt" />
      <None Include="Assets\Addons\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
      <None Include="Assets\Addons\Vive-Teleporter\README.txt" />
      <None Include="Assets\Addons\Vive-Teleporter\LICENCE.txt" />
      <None Include="Assets\Addons\VolumetricLines\Shaders\VolumetricLineStripShaderAdditive.shader" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
+     <None Include="Assets\Addons\Rocks and Boulders 2\Shaders\Blend SM3.shader" />
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_AlphaOut.shader" />
      <None Include="Assets\Addons\VolumetricLines\Shaders\VolumetricLineStripShaderAlphaBlended.shader" />
      <None Include="Assets\Addons\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
@@ -326,6 +333,7 @@
      <None Include="Assets\Addons\SteamVR\Resources\SteamVR_ColorOut.shader" />
      <None Include="Assets\Models\Characters Apocalypse (pack)\Not for demo\Character_Apocalypse\shader\Rim Ligthing (diff_norm_spec).shader" />
      <None Include="Assets\Addons\XWeaponTrail\Shader\xft_displacement_screen.shader" />
+     <None Include="Assets\Addons\Rocks and Boulders 2\Shaders\Blend SM2.shader" />
      <None Include="Assets\Addons\Unity Set Builder\Apocalyptic City\AlphaTest-DiffuseBack.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
