@@ -7,7 +7,7 @@ public class HealthManager : MonoBehaviour {
     private CustomText HealthNum;
 
     private GameObject PlayerGO;
-    private PlayerHealthNewChar PHealth;
+	private DeviceHealth PHealth;
 
     public float DisplayHealth;
 
@@ -16,8 +16,8 @@ public class HealthManager : MonoBehaviour {
         HealthNumGO = GameObject.Find("HealthNum");
         HealthNum = HealthNumGO.GetComponent<CustomText>();
 
-        PlayerGO = GameObject.FindGameObjectWithTag("Player");
-        PHealth = PlayerGO.GetComponent<PlayerHealthNewChar>();
+        PlayerGO = GameObject.FindGameObjectWithTag("Device");
+		PHealth = PlayerGO.GetComponent<DeviceHealth>();
     }
 
     void Update ()

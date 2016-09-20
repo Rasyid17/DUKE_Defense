@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour {
 	public float DynamiteScore = 100.0f;
 
     public float CurrentScore;
-    public float DynamiteCount;
+//    public float DynamiteCount;
     public string Rank;
 
     private GameObject ScoreNumGO;
@@ -50,35 +50,35 @@ public class ScoreManager : MonoBehaviour {
         ScoreNumGO = GameObject.Find("ScoreNum");
         ScoreNum = ScoreNumGO.GetComponent<CustomText>();
         ScoreAnim = ScoreNumGO.GetComponent<Animation>();
-
-        ScorePlusGO = GameObject.Find("ScoreNumPlus");
-        ScorePlus = ScorePlusGO.GetComponent<CustomText>();
-        ScorePlusAnim = ScorePlusGO.GetComponent<Animation>();
-
-        DynamiteNumGO = GameObject.Find("DynamiteNum");
-        PortalNum = DynamiteNumGO.GetComponent<CustomText>();
-        DynamiteAnim = DynamiteNumGO.GetComponent<Animation>();
-
-        DynamitPlusGO = GameObject.Find("DynamiteNumPlus");
-        DynamitePlus = DynamitPlusGO.GetComponent<CustomText>();
-        DynamitePlusAnim = DynamitPlusGO.GetComponent<Animation>();
-
-        RankNumGO = GameObject.Find("RankNum");
-        RankNum = RankNumGO.GetComponent<CustomText>();
-
-        ScorePlus.text = "";
-        DynamitePlus.text = "";
+//
+//        ScorePlusGO = GameObject.Find("ScoreNumPlus");
+//        ScorePlus = ScorePlusGO.GetComponent<CustomText>();
+//        ScorePlusAnim = ScorePlusGO.GetComponent<Animation>();
+//
+//        DynamiteNumGO = GameObject.Find("DynamiteNum");
+//        PortalNum = DynamiteNumGO.GetComponent<CustomText>();
+//        DynamiteAnim = DynamiteNumGO.GetComponent<Animation>();
+//
+//        DynamitPlusGO = GameObject.Find("DynamiteNumPlus");
+//        DynamitePlus = DynamitPlusGO.GetComponent<CustomText>();
+//        DynamitePlusAnim = DynamitPlusGO.GetComponent<Animation>();
+//
+//        RankNumGO = GameObject.Find("RankNum");
+//        RankNum = RankNumGO.GetComponent<CustomText>();
+//
+//        ScorePlus.text = "";
+//        DynamitePlus.text = "";
                
         CurrentScore = 0;
-        DynamiteCount = 0;
-        Rank = "";
+//        DynamiteCount = 0;
+//        Rank = "";
     }
 
     void Update()
     {
         ScoreNum.text = CurrentScore.ToString();
-        PortalNum.text = DynamiteCount.ToString();
-        RankNum.text = Rank;
+//        PortalNum.text = DynamiteCount.ToString();
+//        RankNum.text = Rank;
 
         if (CurrentScore <= 40)
             Rank = "F";
@@ -216,8 +216,8 @@ public class ScoreManager : MonoBehaviour {
 
     public void GetDynamite ()
     {
-        CurrentScore += DynamiteScore;
-        DynamiteCount = 1;
+//        CurrentScore += DynamiteScore;
+//        DynamiteCount = 1;
         //ScoreAnim.Play("ScoreNumAnim");
         //DynamiteAnim.Play("DynamiteNumAnim");
 

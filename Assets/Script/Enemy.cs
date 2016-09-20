@@ -3,19 +3,21 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour {
 
+	[Header("Info")]
 	public float distance;
 	RaycastHit hit;
 	Transform target;
-	public NavMeshAgent nav;
-	public Transform device;
+	NavMeshAgent nav;
+	Transform device;
 	public float health = 100;
 	CapsuleCollider capsuleCollider;
 	SphereCollider sphereCollider;
-	public Animator anim;
-	public GameObject[] pickups;
+	Animator anim;
 
 	private GameObject GameManagerGO;
 	private ScoreManager ScrManager;
+
+	[Header("Type of enemy")]
 	public bool IAmZombieA;
 	public bool IAmZombieA1;
 	public bool IAmZombieA2;
@@ -32,33 +34,35 @@ public class Enemy : MonoBehaviour {
 	public bool IAmZombieD1;
 	public bool IAmZombieD2;
 
-	public float ZombieADamage = 2.5f;
-	public float ZombieA1Damage = 2.5f;
-	public float ZombieA2Damage = 2.5f;
+	private float ZombieADamage = 2f;
+	private float ZombieA1Damage = 2f;
+	private float ZombieA2Damage = 2f;
 
-	public float ZombieBDamage = 5.0f;
-	public float ZombieB1Damage = 5.0f;
-	public float ZombieB2Damage = 5.0f;
+	private float ZombieBDamage = 5.0f;
+	private float ZombieB1Damage = 5.0f;
+	private float ZombieB2Damage = 5.0f;
 
-	public float ZombieCDamage = 10.0f;
-	public float ZombieC1Damage = 10.0f;
-	public float ZombieC2Damage = 10.0f;
+	private float ZombieCDamage = 10.0f;
+	private float ZombieC1Damage = 10.0f;
+	private float ZombieC2Damage = 10.0f;
 
-	public float ZombieDDamage = 7.5f;
-	public float ZombieD1Damage = 7.5f;
-	public float ZombieD2Damage = 7.5f;
+	private float ZombieDDamage = 8f;
+	private float ZombieD1Damage = 8f;
+	private float ZombieD2Damage = 8f;
 
 	private GameObject DeviceReference;
 	private float MainDamage;
+
+	[Header("Current state")]
 	public bool InRange;
-	public float currentValue;
+	float currentValue;
 	public bool canAttack = true;
 
 
 	void Awake()
 	{
 		nav = GetComponent <NavMeshAgent> ();
-		device = GameObject.FindGameObjectWithTag("Need2Destroy").transform;
+		device = GameObject.FindGameObjectWithTag("Device").transform;
 		capsuleCollider = GetComponent <CapsuleCollider> ();
 		sphereCollider = GetComponent<SphereCollider>();
 		anim = GetComponent <Animator> ();
@@ -105,6 +109,8 @@ public class Enemy : MonoBehaviour {
 	
 		distance = Vector3.Distance(transform.position,device.position);
 
+		print (nav.remainingDistance);
+
 		if (DeviceReference.GetComponent<DeviceHealth>().PlayerIsDead == true)
 			anim.SetBool("PlayerIsDead", true);
 		else
@@ -136,12 +142,113 @@ public class Enemy : MonoBehaviour {
 		Vector3 direction = (target.position - transform.position).normalized;
 		direction.y = 0.0f;//Prevents zombies from tilting forwards/backwards when player is facing them
 		Quaternion lookRotation = Quaternion.LookRotation(direction);
-		//if (TimeFreeze.AreaOfEffectLongevity > 0)//Check duration of TimeFreeze
-		//{
-		//     if (TimeFreeze.gameObject.activeInHierarchy == true)//Check if TimeFreeze is still active
-		//        transform.rotation = Quaternion.Slerp(Quaternion.Euler(0.0f, 0.0f, 0.0f), Quaternion.Euler(0.0f, 0.0f, 0.0f), Time.deltaTime * 10f);//Prevents zombies from turning when in radius of active TimeFreeze
-		//}
-		//else
+	
 		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f); //Rotate like normal
 	}
+
+	public void Attack()
+	{
+		
+		if (InRange)
+		{
+			DeviceReference.GetComponent<DeviceHealth>().remove(MainDamage);
+
+			AudioSource noise = GetComponent<AudioSource>();
+			noise.Play();
+
+			print ("nomnom");
+
+		}        
+	}
+
+	public void ApplyDamage(float amount)
+	{
+		health -= amount;
+
+		if (IAmZombieA || IAmZombieA1 || IAmZombieA2 || IAmZombieC || IAmZombieC1 || IAmZombieC2 || IAmZombieB || IAmZombieB1 || IAmZombieB2 || IAmZombieD || IAmZombieD1 || IAmZombieD2) {
+			anim.SetBool ("EnemyGotHit", true);
+			StartCoroutine (DamageCoolDown ());
+
+		} 
+
+		if (health <= 0)
+			Death ();
+	}
+
+	IEnumerator DamageCoolDown ()
+	{
+		yield return new WaitForSeconds(0.2f);
+		anim.SetBool("EnemyGotHit", false);
+	}
+
+	void Death ()
+	{
+
+		nav.Stop ();
+		capsuleCollider.enabled = false;
+		sphereCollider.enabled = false;
+
+		if (IAmZombieA || IAmZombieA1 || IAmZombieA2 || IAmZombieC || IAmZombieC1 || IAmZombieC2 || IAmZombieB || IAmZombieB1 || IAmZombieB2 || IAmZombieD || IAmZombieD1 || IAmZombieD2) {
+			anim.SetBool("EnemyStillAlive", false);
+
+		}
+
+
+		CheckWhichZombieIAm();
+		Destroy (gameObject, 4f);
+	}
+
+	void CheckWhichZombieIAm ()
+	{
+		if (IAmZombieA)
+			ScrManager.KilledZombieA();
+		if (IAmZombieA1)
+			ScrManager.KilledZombieA1();
+		if (IAmZombieA2)
+			ScrManager.KilledZombieA2();
+
+		if (IAmZombieB)
+			ScrManager.KilledZombieB();
+		if (IAmZombieB1)
+			ScrManager.KilledZombieB1();
+		if (IAmZombieB2)
+			ScrManager.KilledZombieB2();
+
+		if (IAmZombieC)
+			ScrManager.KilledZombieC();
+		if (IAmZombieC1)
+			ScrManager.KilledZombieC1();
+		if (IAmZombieC2)
+			ScrManager.KilledZombieC2();
+
+		if (IAmZombieD)
+			ScrManager.KilledZombieD();
+		if (IAmZombieD1)
+			ScrManager.KilledZombieD1();
+		if (IAmZombieD2)
+			ScrManager.KilledZombieD2();
+	}
+
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.CompareTag ("Device"))
+			InRange = true;
+
+		if (other.CompareTag ("Dead"))
+		{
+			InRange = false;
+			anim.SetBool("PlayerIsDead", true);
+			canAttack = false;
+			nav.enabled = false;
+		}
+
+	}
+
+	void OnTriggerExit (Collider other)
+	{
+		if (other.CompareTag("Device"))
+			InRange = false;
+	}
+
+
 }
