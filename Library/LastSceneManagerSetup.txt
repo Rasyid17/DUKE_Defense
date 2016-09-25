@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/mockLevel.unity
+- path: Assets/Scene/defensemap.unity
   isLoaded: 1
   isActive: 1
