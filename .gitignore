@@ -218,3 +218,5 @@ pip-log.txt
 *.vis
 *.clust
 Library/assetDatabase3
+Library/
+Assets/Scene/defensemap/LightingData.asset

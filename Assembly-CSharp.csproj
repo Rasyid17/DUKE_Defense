@@ -284,10 +284,13 @@
      <Compile Include="Assets\Script\HealthManager.cs" />
      <Compile Include="Assets\Script\HolsterTracking.cs" />
      <Compile Include="Assets\Script\LaserGunShotBehaviour.cs" />
+     <Compile Include="Assets\Script\LeapShoot.cs" />
      <Compile Include="Assets\Script\Lerp.cs" />
      <Compile Include="Assets\Script\PauseScript.cs" />
      <Compile Include="Assets\Script\PlayerHealthNewChar.cs" />
+     <Compile Include="Assets\Script\SceneLoad.cs" />
      <Compile Include="Assets\Script\ScoreManager.cs" />
+     <Compile Include="Assets\Script\ShotHIT.cs" />
      <Compile Include="Assets\Script\TimeManager.cs" />
      <Compile Include="Assets\Script\WavesManager.cs" />
      <Compile Include="Assets\Script\scoreManager1.cs" />

@@ -3,10 +3,10 @@ using System.Collections;
 
 public class BulletHit : MonoBehaviour {
 
-	public GameObject fireExplosion;
-	public GameObject bloodSplatter;
-	public AudioSource slice;
-	float damageZombie;
+//	public GameObject fireExplosion;
+//	public GameObject bloodSplatter;
+//	public AudioSource slice;
+	public float damageZombie;
 
 	public bool LaserGun;
 	public bool LaserRifle;
@@ -24,33 +24,29 @@ public class BulletHit : MonoBehaviour {
 
 	void OnTriggerEnter(Collider hit)
 	{
-		if (hit.gameObject.tag == "Zombie")
+		if (hit.gameObject.tag == "Enemy")
 		{
 			if(Sword)
             {
-                slice.GetComponent<AudioSource>().Play();
+//                slice.GetComponent<AudioSource>().Play();
             }
 
             hit.gameObject.GetComponent<Enemy>().ApplyDamage(damageZombie);
-            //hit.gameObject.GetComponent<EnemyZombie_Final>().ApplyDamage(damageZombie);
-            GameObject blood = GameObject.Instantiate(bloodSplatter, transform.position, transform.rotation) as GameObject;
-			GameObject.Destroy(blood, 1f);
-			//Debug.Log("blood splatting");
+//            GameObject blood = GameObject.Instantiate(bloodSplatter, transform.position, transform.rotation) as GameObject;
+//			GameObject.Destroy(blood, 1f);
 		}
 		else
 		{
 			if(!Sword)
 			{
-				GameObject smoke = GameObject.Instantiate(fireExplosion, transform.position, fireExplosion.transform.rotation) as GameObject;
-				GameObject.Destroy(smoke, 2f);
-				//Debug.Log("colliding");
+//				GameObject smoke = GameObject.Instantiate(fireExplosion, transform.position, fireExplosion.transform.rotation) as GameObject;
+//				GameObject.Destroy(smoke, 2f);
 			}
 		}
 	}
 
 	void OnTriggerExit(Collider hit)
 	{
-		//print("out of collider");
         if(!Sword)
 		Destroy(this);
 	}

@@ -26,29 +26,29 @@ public class ScoreManager : MonoBehaviour {
     public string Rank;
 
     private GameObject ScoreNumGO;
-    private CustomText ScoreNum;
+	private TextMesh ScoreNum;
     private Animation ScoreAnim;
 
     private GameObject ScorePlusGO;
-    private CustomText ScorePlus;
+	private TextMesh ScorePlus;
     private Animation ScorePlusAnim;
 
     private GameObject DynamiteNumGO;
-    private CustomText PortalNum;
+	private TextMesh PortalNum;
     private Animation DynamiteAnim;
 
     private GameObject DynamitPlusGO;
-    private CustomText DynamitePlus;
+    private TextMesh DynamitePlus;
     private Animation DynamitePlusAnim;
 
     public GameObject RankNumGO;
-    private CustomText RankNum;
+    private TextMesh RankNum;
 
 
     void Start()
     {
         ScoreNumGO = GameObject.Find("ScoreNum");
-        ScoreNum = ScoreNumGO.GetComponent<CustomText>();
+        ScoreNum = ScoreNumGO.GetComponent<TextMesh>();
         ScoreAnim = ScoreNumGO.GetComponent<Animation>();
 //
 //        ScorePlusGO = GameObject.Find("ScoreNumPlus");
@@ -233,19 +233,19 @@ public class ScoreManager : MonoBehaviour {
     
 
 
-    IEnumerator ScoreNumPlusVisibility ()
-    {
-        ScorePlus.enabled = true;
-        yield return new WaitForSeconds(0.5f);
-        ScorePlus.enabled = false;
-    }
-
-    IEnumerator DynamiteNumPlusVisibility ()
-    {
-        DynamitePlus.enabled = true;
-        yield return new WaitForSeconds(0.5f);
-        DynamitePlus.enabled = false;
-    }
+//    IEnumerator ScoreNumPlusVisibility ()
+//    {
+//        ScorePlus.enabled = true;
+//        yield return new WaitForSeconds(0.5f);
+//        ScorePlus.enabled = false;
+//    }
+//
+//    IEnumerator DynamiteNumPlusVisibility ()
+//    {
+//        DynamitePlus.enabled = true;
+//        yield return new WaitForSeconds(0.5f);
+//        DynamitePlus.enabled = false;
+//    }
 
     
 
