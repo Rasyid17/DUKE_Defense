@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class WavesManager : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class WavesManager : MonoBehaviour {
 
 	public Wave[] waves;
 	private int nextWave = 0;
+	private GameObject waveNum;
+	private TextMesh waveNumGo;
 
 	public Transform[] spawnPoints;
 
@@ -38,6 +41,8 @@ public class WavesManager : MonoBehaviour {
 		}
 
 		waveCountdown = timeBetweenWaves;
+		waveNum = GameObject.Find ("WaveNum");
+//		waveNumGo = waveNum.GetComponent<TextMesh> ();
 	}
 	
 	// Update is called once per frame
@@ -53,6 +58,8 @@ public class WavesManager : MonoBehaviour {
 			{
 				return;
 			}
+
+//			waveNumGo.text = name.ToString();
 		}
 
 		if(waveCountdown <= 0)

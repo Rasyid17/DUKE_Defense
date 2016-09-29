@@ -58,6 +58,8 @@ public class Enemy : MonoBehaviour {
 	float currentValue;
 	public bool canAttack = true;
 
+	private float enemydamage;
+
 
 	void Awake()
 	{
@@ -109,7 +111,7 @@ public class Enemy : MonoBehaviour {
 	
 		distance = Vector3.Distance(transform.position,device.position);
 
-		print (nav.remainingDistance);
+//		print (nav.remainingDistance);
 
 		if (DeviceReference.GetComponent<DeviceHealth>().PlayerIsDead == true)
 			anim.SetBool("PlayerIsDead", true);
@@ -156,7 +158,7 @@ public class Enemy : MonoBehaviour {
 			AudioSource noise = GetComponent<AudioSource>();
 			noise.Play();
 
-			print ("nomnom");
+//			print ("nomnom");
 
 		}        
 	}
@@ -174,6 +176,7 @@ public class Enemy : MonoBehaviour {
 		if (health <= 0)
 			Death ();
 	}
+
 
 	IEnumerator DamageCoolDown ()
 	{

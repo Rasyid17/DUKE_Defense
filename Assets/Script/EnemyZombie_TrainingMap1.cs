@@ -66,7 +66,7 @@ public class EnemyZombie_TrainingMap1 : MonoBehaviour {
 //	private vp_PlayerEventHandler PlayerEvents = null;
 
 	private GameObject PlayerReference;
-	private PlayerHealthNewChar PlayerScriptReferece;
+	private DeviceHealth PlayerScriptReferece;
 
 
 	//public GameObject indicatePain;
@@ -74,7 +74,7 @@ public class EnemyZombie_TrainingMap1 : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		nav = GetComponent <NavMeshAgent> ();
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+		player = GameObject.FindGameObjectWithTag("Device").transform;
 		capsuleCollider = GetComponent <CapsuleCollider> ();
         sphereCollider = GetComponent<SphereCollider>();
 		anim = GetComponent <Animator> ();
@@ -83,7 +83,7 @@ public class EnemyZombie_TrainingMap1 : MonoBehaviour {
 //		PlayerEvents = player.transform.GetComponent<vp_PlayerEventHandler> ();
 
         PlayerReference = GameObject.Find("OVRPlayerController");
-        PlayerScriptReferece = PlayerReference.GetComponent<PlayerHealthNewChar>();
+		PlayerScriptReferece = PlayerReference.GetComponent<DeviceHealth>();
 
 
         GameManagerGO = GameObject.Find("GameManager");

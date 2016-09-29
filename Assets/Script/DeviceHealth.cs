@@ -16,7 +16,7 @@ public class DeviceHealth : MonoBehaviour {
 
 	public bool PlayerIsDead = false;
 
-	public GameObject hurtfx;
+//	public GameObject hurtfx;
 
 	void Awake () {
 	
@@ -51,6 +51,7 @@ public class DeviceHealth : MonoBehaviour {
 			currentHealth = MinHealth;
 			PlayerIsDead = true;
 			gameObject.GetComponent<DeviceHealth>().enabled = false;
+			Time.timeScale = 0;
 		}
 
 	}
@@ -61,7 +62,7 @@ public class DeviceHealth : MonoBehaviour {
 			currentHealth -= amount;
 		}
 
-		hurtfx.SetActive (true);
+//		hurtfx.SetActive (true);
 		StartCoroutine (Hurt());
 	}
 
@@ -69,7 +70,7 @@ public class DeviceHealth : MonoBehaviour {
 
 	{
 		yield return new WaitForSeconds (0.5f);
-		hurtfx.SetActive (false);
+//		hurtfx.SetActive (false);
 	}
 
 }
