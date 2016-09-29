@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using VRTK;
+using UnityEngine.UI;
 
 public class Gun : VRTK_InteractableObject
 {
 	private GameObject bullet;
 	public GameObject shot;
+	public float bulletCount = 60f;
+	private GameObject bulletNumGo;
+	private TextMesh bulletNum;
+	private float counter;
+	public float reloadTime;
+	private GameObject reloadBar;
     private float bulletSpeed = 3000f;
     private float bulletLife = 5f;
 
@@ -19,17 +26,29 @@ public class Gun : VRTK_InteractableObject
 		base.Start ();
 		bullet = transform.Find ("Bullet").gameObject;
 		bullet.SetActive (false);
+		bulletNumGo = GameObject.Find ("BulletNum");
+		bulletNum = bulletNumGo.GetComponent<TextMesh> ();
 	}
 
+	void Update()
+	{
+		bulletNum.text = bulletCount.ToString ();
+	}
 
     private void FireBullet()
     {
-		GameObject bulletClone = Instantiate(shot, bullet.transform.position, bullet.transform.rotation) as GameObject;
-        bulletClone.SetActive(true);
-//        Rigidbody rb = bulletClone.GetComponent<Rigidbody>();
-//        rb.AddForce(-bullet.transform.forward * bulletSpeed);
-        Destroy(bulletClone, bulletLife);
-
-
+		if(bulletCount  >= 1)
+		{
+			GameObject bulletClone = Instantiate(shot, bullet.transform.position, bullet.transform.rotation) as GameObject;
+			bulletClone.SetActive(true);
+			//        Rigidbody rb = bulletClone.GetComponent<Rigidbody>();
+			//        rb.AddForce(-bullet.transform.forward * bulletSpeed);
+			Destroy(bulletClone, bulletLife);
+			bulletCount--;
+		}
+			
+		if(bulletCount <= 0)
+		{
+		}
     }
 }

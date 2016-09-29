@@ -42,7 +42,7 @@ public class WavesManager : MonoBehaviour {
 
 		waveCountdown = timeBetweenWaves;
 		waveNum = GameObject.Find ("WaveNum");
-//		waveNumGo = waveNum.GetComponent<TextMesh> ();
+		waveNumGo = waveNum.GetComponent<TextMesh> ();
 	}
 	
 	// Update is called once per frame
@@ -117,11 +117,12 @@ public class WavesManager : MonoBehaviour {
 		for (int i = 0; i < _wave.count; i++)
 		{
 			SpawnEnemy (_wave.enemy);
+
 			yield return new WaitForSeconds (1f / _wave.rate);
 		}
 
 		state = SpawnState.WAITING;
-
+		waveNumGo.text = _wave.name.ToString ();
 		yield break;
 	}
 

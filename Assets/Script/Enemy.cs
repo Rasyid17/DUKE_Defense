@@ -123,9 +123,9 @@ public class Enemy : MonoBehaviour {
 				nav.SetDestination (device.position);
 				RotateTowards (device.transform);
 
-				if (nav.remainingDistance <= 2)
+				if (nav.remainingDistance <= 3)
 					anim.SetBool ("PlayerInRange", true);
-				else if (nav.remainingDistance >= 2)
+				else if (nav.remainingDistance >= 3)
 					anim.SetBool ("PlayerInRange", false);
 
 				anim.SetFloat ("PlayerStillThere", currentValue);
