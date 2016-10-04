@@ -9,9 +9,9 @@ public class Gun : VRTK_InteractableObject
 	public float bulletCount = 60;
 	public TextMesh bulletNum;
 	private AudioSource gunSFX;
-	private float counter;
+	public float counter;
 	public float reloadTime;
-	private GameObject reloadBar;
+	public GameObject reloadBar;
     private float bulletSpeed = 3000f;
     private float bulletLife = 5f;
 
@@ -27,11 +27,30 @@ public class Gun : VRTK_InteractableObject
 		bullet = transform.Find ("Bullet").gameObject;
 		bullet.SetActive (false);
 		gunSFX = gameObject.GetComponent<AudioSource> ();
+
 	}
 
 	void Update()
 	{
 		bulletNum.text = bulletCount.ToString ();
+
+		if(bulletCount <= 0)
+		{
+			//			bulletCount = 60;
+			reloadBar.SetActive (true);
+
+			if (Mathf.FloorToInt(counter) < reloadTime)
+			{
+				counter += 4 * Time.deltaTime;
+				reloadBar.GetComponent<Scrollbar>().size = counter / reloadTime;
+
+				if(reloadBar.GetComponent<Scrollbar>().size == 1)
+				{
+					reloadBar.SetActive (false);
+					bulletCount = 60;
+				}
+			}
+		}
 	}
 
     private void FireBullet()
@@ -47,9 +66,5 @@ public class Gun : VRTK_InteractableObject
 			bulletCount--;
 		}
 			
-		if(bulletCount <= 0)
-		{
-			bulletCount = 60;
-		}
     }
 }
