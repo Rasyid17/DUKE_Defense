@@ -276,6 +276,7 @@
      <Compile Include="Assets\Addons\XWeaponTrail\Scripts\XWeaponTrailDemo.cs" />
      <Compile Include="Assets\Elementals\Demo\Scripts\GE_Elementals_Demo.cs" />
      <Compile Include="Assets\Script\BulletHit.cs" />
+     <Compile Include="Assets\Script\ButtonScript.cs" />
      <Compile Include="Assets\Script\CustomText.cs" />
      <Compile Include="Assets\Script\DeviceHealth.cs" />
      <Compile Include="Assets\Script\Enemy.cs" />

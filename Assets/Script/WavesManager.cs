@@ -20,8 +20,8 @@ public class WavesManager : MonoBehaviour {
 
 	public Wave[] waves;
 	private int nextWave = 0;
-	private GameObject waveNum;
-	private TextMesh waveNumGo;
+//	private GameObject waveNum;
+//	private TextMesh waveNumGo;
 
 	public Transform[] spawnPoints;
 
@@ -41,8 +41,8 @@ public class WavesManager : MonoBehaviour {
 		}
 
 		waveCountdown = timeBetweenWaves;
-		waveNum = GameObject.Find ("WaveNum");
-		waveNumGo = waveNum.GetComponent<TextMesh> ();
+//		waveNum = GameObject.Find ("WaveNum");
+//		waveNumGo = waveNum.GetComponent<TextMesh> ();
 	}
 	
 	// Update is called once per frame
@@ -122,7 +122,7 @@ public class WavesManager : MonoBehaviour {
 		}
 
 		state = SpawnState.WAITING;
-		waveNumGo.text = _wave.name.ToString ();
+//		waveNumGo.text = _wave.name.ToString ();
 		yield break;
 	}
 

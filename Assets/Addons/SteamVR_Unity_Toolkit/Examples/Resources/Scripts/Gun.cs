@@ -6,9 +6,9 @@ public class Gun : VRTK_InteractableObject
 {
 	private GameObject bullet;
 	public GameObject shot;
-	public float bulletCount = 60f;
-	private GameObject bulletNumGo;
-	private TextMesh bulletNum;
+	public float bulletCount = 60;
+	public TextMesh bulletNum;
+	private AudioSource gunSFX;
 	private float counter;
 	public float reloadTime;
 	private GameObject reloadBar;
@@ -26,8 +26,7 @@ public class Gun : VRTK_InteractableObject
 		base.Start ();
 		bullet = transform.Find ("Bullet").gameObject;
 		bullet.SetActive (false);
-		bulletNumGo = GameObject.Find ("BulletNum");
-		bulletNum = bulletNumGo.GetComponent<TextMesh> ();
+		gunSFX = gameObject.GetComponent<AudioSource> ();
 	}
 
 	void Update()
@@ -44,11 +43,13 @@ public class Gun : VRTK_InteractableObject
 			//        Rigidbody rb = bulletClone.GetComponent<Rigidbody>();
 			//        rb.AddForce(-bullet.transform.forward * bulletSpeed);
 			Destroy(bulletClone, bulletLife);
+			gunSFX.Play ();
 			bulletCount--;
 		}
 			
 		if(bulletCount <= 0)
 		{
+			bulletCount = 60;
 		}
     }
 }
