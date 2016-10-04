@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class TimeManager : MonoBehaviour {
 
     public float TimeLeft;
-    public string levelName;
+//    public string levelName;
 
     private GameObject TimeNumGO;
 	private TextMesh TimeNum;
