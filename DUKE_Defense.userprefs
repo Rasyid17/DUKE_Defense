@@ -2,11 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun.cs">
     <Files>
-      <File FileName="Assets\Script\LaserGunShotBehaviour.cs" Line="10" Column="74" />
-      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun.cs" Line="38" Column="1" />
-      <File FileName="Assets\Script\Enemy.cs" Line="128" Column="40" />
-      <File FileName="Assets\Script\WavesManager.cs" Line="125" Column="43" />
-      <File FileName="Assets\Script\LeapShoot.cs" Line="158" Column="4" />
+      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun.cs" Line="50" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

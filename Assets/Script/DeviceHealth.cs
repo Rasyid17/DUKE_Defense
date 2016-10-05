@@ -52,6 +52,7 @@ public class DeviceHealth : MonoBehaviour {
 			PlayerIsDead = true;
 			gameObject.GetComponent<DeviceHealth>().enabled = false;
 			Time.timeScale = 0;
+			return;
 		}
 
 	}

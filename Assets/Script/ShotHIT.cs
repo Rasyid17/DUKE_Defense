@@ -7,7 +7,7 @@ public class ShotHIT : MonoBehaviour {
 
 	void Start()
 	{
-		Debug.Log ("mothafucka");
+//		Debug.Log ("mothafucka");
 	}
 
 	void OnTriggerEnter(Collider hit)
@@ -18,7 +18,7 @@ public class ShotHIT : MonoBehaviour {
 			//Debug.Log ("HIT LA");
 		}
 
-		if ((hit.gameObject.tag != "PlayerNoCollide") && (hit.gameObject.tag != "Bullet")) {
+		if ((hit.gameObject.tag != "PlayerNoCollide") && (hit.gameObject.tag != "Bullet") && (hit.gameObject.tag != "Device")) {
 			Destroy(gameObject);
 		}
 	}

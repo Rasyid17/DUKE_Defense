@@ -60,6 +60,9 @@ public class Enemy : MonoBehaviour {
 
 	private float enemydamage;
 
+	public AudioSource runSFX;
+	public AudioSource attackSFX;
+
 
 	void Awake()
 	{
@@ -123,9 +126,9 @@ public class Enemy : MonoBehaviour {
 				nav.SetDestination (device.position);
 				RotateTowards (device.transform);
 
-				if (nav.remainingDistance <= 3)
+				if (nav.remainingDistance <= 5)
 					anim.SetBool ("PlayerInRange", true);
-				else if (nav.remainingDistance >= 3)
+				else if (nav.remainingDistance >= 5)
 					anim.SetBool ("PlayerInRange", false);
 
 				anim.SetFloat ("PlayerStillThere", currentValue);
@@ -155,8 +158,8 @@ public class Enemy : MonoBehaviour {
 		{
 			DeviceReference.GetComponent<DeviceHealth>().remove(MainDamage);
 
-			AudioSource noise = GetComponent<AudioSource>();
-			noise.Play();
+			runSFX.Stop();
+			attackSFX.Play ();
 
 //			print ("nomnom");
 

@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour {
 
     private GameObject HealthNumGO;
     private TextMesh HealthNum;
+	private GameObject HPBar;
 
     private GameObject PlayerGO;
 	private DeviceHealth PHealth;
@@ -16,6 +18,8 @@ public class HealthManager : MonoBehaviour {
         HealthNumGO = GameObject.Find("HealthNum");
         HealthNum = HealthNumGO.GetComponent<TextMesh>();
 
+		HPBar = GameObject.Find ("HealthBar");
+
         PlayerGO = GameObject.FindGameObjectWithTag("Device");
 		PHealth = PlayerGO.GetComponent<DeviceHealth>();
     }
@@ -24,5 +28,6 @@ public class HealthManager : MonoBehaviour {
     {
         HealthNum.text = PHealth.currentHealth.ToString();
         DisplayHealth = PHealth.currentHealth;
+		HPBar.GetComponent<Slider>().value = PHealth.currentHealth;
     }
 }
