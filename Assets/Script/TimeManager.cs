@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour {
 
@@ -8,14 +9,14 @@ public class TimeManager : MonoBehaviour {
 //    public string levelName;
 
     private GameObject TimeNumGO;
-	private TextMesh TimeNum;
+	private Text TimeNum;
 
     void Start ()
     {
         TimeLeft = 300;
 
         TimeNumGO = GameObject.Find("TimeNum");
-        TimeNum = TimeNumGO.GetComponent<TextMesh>();
+        TimeNum = TimeNumGO.GetComponent<Text>();
     }
 
     void Update ()

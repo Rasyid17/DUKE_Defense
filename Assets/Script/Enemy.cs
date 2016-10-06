@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour {
 		sphereCollider = GetComponent<SphereCollider>();
 		anim = GetComponent <Animator> ();
 
-		DeviceReference = GameObject.Find ("Device");
+		DeviceReference = GameObject.Find ("Crate");
 		GameManagerGO = GameObject.Find ("GameManager");
 		ScrManager = GameManagerGO.GetComponent<ScoreManager> ();
 	}

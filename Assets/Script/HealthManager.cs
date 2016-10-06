@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour {
 
     private GameObject HealthNumGO;
-    private TextMesh HealthNum;
+    private Text HealthNum;
 	private GameObject HPBar;
 
     private GameObject PlayerGO;
@@ -16,7 +16,7 @@ public class HealthManager : MonoBehaviour {
     void Start ()
     {
         HealthNumGO = GameObject.Find("HealthNum");
-        HealthNum = HealthNumGO.GetComponent<TextMesh>();
+        HealthNum = HealthNumGO.GetComponent<Text>();
 
 		HPBar = GameObject.Find ("HealthBar");
 
