@@ -43,97 +43,97 @@ public class VRTK_ControllerEvents_ListenerExample : MonoBehaviour
 
     private void DebugLogger(uint index, string button, string action, ControllerInteractionEventArgs e)
     {
-        Debug.Log("Controller on index '" + index + "' " + button + " has been " + action
-                + " with a pressure of " + e.buttonPressure + " / trackpad axis at: " + e.touchpadAxis + " (" + e.touchpadAngle + " degrees)");
+//        Debug.Log("Controller on index '" + index + "' " + button + " has been " + action
+//                + " with a pressure of " + e.buttonPressure + " / trackpad axis at: " + e.touchpadAxis + " (" + e.touchpadAngle + " degrees)");
     }
 
     private void DoTriggerPressed(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "pressed", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "pressed", e);
     }
 
     private void DoTriggerReleased(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "released", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "released", e);
     }
 
     private void DoTriggerTouchStart(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "touched", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "touched", e);
     }
 
     private void DoTriggerTouchEnd(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "untouched", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "untouched", e);
     }
 
     private void DoTriggerHairlineStart(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "hairline start", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "hairline start", e);
     }
 
     private void DoTriggerHairlineEnd(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "hairline end", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "hairline end", e);
     }
 
     private void DoTriggerClicked(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "clicked", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "clicked", e);
     }
 
     private void DoTriggerUnclicked(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "unclicked", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "unclicked", e);
     }
 
     private void DoTriggerAxisChanged(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TRIGGER", "axis changed", e);
+//        DebugLogger(e.controllerIndex, "TRIGGER", "axis changed", e);
     }
 
     private void DoApplicationMenuPressed(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "APPLICATION MENU", "pressed down", e);
+//        DebugLogger(e.controllerIndex, "APPLICATION MENU", "pressed down", e);
     }
 
     private void DoApplicationMenuReleased(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "APPLICATION MENU", "released", e);
+//        DebugLogger(e.controllerIndex, "APPLICATION MENU", "released", e);
     }
 
     private void DoGripPressed(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "GRIP", "pressed down", e);
+//        DebugLogger(e.controllerIndex, "GRIP", "pressed down", e);
     }
 
     private void DoGripReleased(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "GRIP", "released", e);
+//        DebugLogger(e.controllerIndex, "GRIP", "released", e);
     }
 
     private void DoTouchpadPressed(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TOUCHPAD", "pressed down", e);
+//        DebugLogger(e.controllerIndex, "TOUCHPAD", "pressed down", e);
     }
 
     private void DoTouchpadReleased(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TOUCHPAD", "released", e);
+//        DebugLogger(e.controllerIndex, "TOUCHPAD", "released", e);
     }
 
     private void DoTouchpadTouchStart(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TOUCHPAD", "touched", e);
+//        DebugLogger(e.controllerIndex, "TOUCHPAD", "touched", e);
     }
 
     private void DoTouchpadTouchEnd(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TOUCHPAD", "untouched", e);
+//        DebugLogger(e.controllerIndex, "TOUCHPAD", "untouched", e);
     }
 
     private void DoTouchpadAxisChanged(object sender, ControllerInteractionEventArgs e)
     {
-        DebugLogger(e.controllerIndex, "TOUCHPAD", "axis changed", e);
+//        DebugLogger(e.controllerIndex, "TOUCHPAD", "axis changed", e);
     }
 }
