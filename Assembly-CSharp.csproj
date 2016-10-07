@@ -182,6 +182,7 @@
      <Compile Include="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Controller_Menu.cs" />
      <Compile Include="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\ExcludeTeleport.cs" />
      <Compile Include="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun.cs" />
+     <Compile Include="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun_DUKE.cs" />
      <Compile Include="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Lamp.cs" />
      <Compile Include="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\LightSaber.cs" />
      <Compile Include="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Menu_Color_Changer.cs" />
