@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
@@ -26,29 +27,29 @@ public class ScoreManager : MonoBehaviour {
     public string Rank;
 
     private GameObject ScoreNumGO;
-	private TextMesh ScoreNum;
+	private Text ScoreNum;
     private Animation ScoreAnim;
 
     private GameObject ScorePlusGO;
-	private TextMesh ScorePlus;
+	private Text ScorePlus;
     private Animation ScorePlusAnim;
 
     private GameObject DynamiteNumGO;
-	private TextMesh PortalNum;
+	private Text PortalNum;
     private Animation DynamiteAnim;
 
     private GameObject DynamitPlusGO;
-    private TextMesh DynamitePlus;
+	private Text DynamitePlus;
     private Animation DynamitePlusAnim;
 
     public GameObject RankNumGO;
-    private TextMesh RankNum;
+    private Text RankNum;
 
 
     void Start()
     {
         ScoreNumGO = GameObject.Find("ScoreNum");
-        ScoreNum = ScoreNumGO.GetComponent<TextMesh>();
+		ScoreNum = ScoreNumGO.GetComponent<Text>();
         ScoreAnim = ScoreNumGO.GetComponent<Animation>();
 //
 //        ScorePlusGO = GameObject.Find("ScoreNumPlus");

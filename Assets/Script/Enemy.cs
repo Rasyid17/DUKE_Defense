@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour {
 		sphereCollider = GetComponent<SphereCollider>();
 		anim = GetComponent <Animator> ();
 
-		DeviceReference = GameObject.Find ("Device");
+		DeviceReference = GameObject.Find ("Crate");
 		GameManagerGO = GameObject.Find ("GameManager");
 		ScrManager = GameManagerGO.GetComponent<ScoreManager> ();
 	}
@@ -172,8 +172,9 @@ public class Enemy : MonoBehaviour {
 
 		if (IAmZombieA || IAmZombieA1 || IAmZombieA2 || IAmZombieC || IAmZombieC1 || IAmZombieC2 || IAmZombieB || IAmZombieB1 || IAmZombieB2 || IAmZombieD || IAmZombieD1 || IAmZombieD2) {
 			anim.SetBool ("EnemyGotHit", true);
+			nav.Stop ();
 			StartCoroutine (DamageCoolDown ());
-
+			StartCoroutine (HitCoolDown());
 		} 
 
 		if (health <= 0)
@@ -187,10 +188,23 @@ public class Enemy : MonoBehaviour {
 		anim.SetBool("EnemyGotHit", false);
 	}
 
+	IEnumerator HitCoolDown()
+	{
+		yield return new WaitForSeconds (0.4f);
+		nav.Resume ();
+
+		if(health <= 0)
+		{
+			nav.Stop ();
+		}
+	}
+
+
 	void Death ()
 	{
 
 		nav.Stop ();
+//		nav.enabled = false;
 		capsuleCollider.enabled = false;
 		sphereCollider.enabled = false;
 
