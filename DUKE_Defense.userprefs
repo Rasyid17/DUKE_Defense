@@ -1,42 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun_DUKE.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Enemy.cs">
     <Files>
-      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\VRTK_ControllerEvents_ListenerExample.cs" Line="108" Column="1" />
-      <File FileName="Assets\Script\attachtoBelt.cs" Line="20" Column="4" />
-      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun_DUKE.cs" Line="78" Column="83" />
-      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Scripts\VRTK_InteractableObject.cs" Line="199" Column="33" />
-      <File FileName="Assets\Script\ButtonScript.cs" Line="21" Column="4" />
+      <File FileName="Assets\Script\Enemy.cs" Line="75" Column="43" />
+      <File FileName="Assets\Script\HealthManager.cs" Line="10" Column="2" />
+      <File FileName="Assets\Script\DeviceHealth.cs" Line="11" Column="18" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="DUKE_Defense" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="Addons" expanded="True">
-                <Node name="SteamVR_Unity_Toolkit" expanded="True">
-                  <Node name="Examples" expanded="True">
-                    <Node name="Resources" expanded="True">
-                      <Node name="Scripts" expanded="True">
-                        <Node name="Gun_DUKE.cs" selected="True" />
-                      </Node>
-                    </Node>
-                  </Node>
-                  <Node name="Scripts" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Script" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="DUKE_Defense" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

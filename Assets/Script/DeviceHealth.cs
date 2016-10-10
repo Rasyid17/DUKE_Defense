@@ -8,7 +8,7 @@ public class DeviceHealth : MonoBehaviour {
 	public float MaxHealth = 100f;
 	public float MinHealth = 0f;
 
-	public GameObject HP;
+//	public GameObject HP;
 	private CustomText customPref;
 
 	private GameObject[] ZombiesAll;
