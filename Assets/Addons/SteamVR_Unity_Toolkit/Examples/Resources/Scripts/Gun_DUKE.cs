@@ -15,6 +15,9 @@ public class Gun_DUKE : VRTK_InteractableObject
     private float bulletSpeed = 3000f;
     private float bulletLife = 5f;
 
+	[SerializeField]
+	GameObject resetObject;
+
     public override void StartUsing(GameObject usingObject)
     {
         base.StartUsing(usingObject);
@@ -67,4 +70,11 @@ public class Gun_DUKE : VRTK_InteractableObject
 		}
 			
     }
+
+	public override void Ungrabbed(GameObject currentTouchingObject) {
+		base.Ungrabbed (currentTouchingObject);
+
+		gameObject.transform.position = resetObject.GetComponent<Transform> ().position;
+		gameObject.transform.rotation = resetObject.GetComponent<Transform> ().rotation;
+	}
 }
