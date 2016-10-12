@@ -8,6 +8,12 @@ public class DeviceHealth : MonoBehaviour {
 	public float MaxHealth = 100f;
 	public float MinHealth = 0f;
 
+	public GameObject burn1;
+	public GameObject burn2;
+	public GameObject burn3;
+
+	public AudioSource explodeSFX;
+
 //	public GameObject HP;
 	private CustomText customPref;
 
@@ -45,6 +51,22 @@ public class DeviceHealth : MonoBehaviour {
 			currentHealth = MaxHealth;
 		}
 
+		if(currentHealth == 70)
+		{
+			burn1.SetActive (true);
+		}
+
+		if(currentHealth == 30)
+		{
+			burn2.SetActive (true);
+		}
+
+		if(currentHealth == 15)
+		{
+			burn3.SetActive (true);
+		}
+
+
 		//=====================================================
 		if (currentHealth <= 0.0f) 
 		{
@@ -52,6 +74,7 @@ public class DeviceHealth : MonoBehaviour {
 			PlayerIsDead = true;
 			gameObject.GetComponent<DeviceHealth>().enabled = false;
 			Time.timeScale = 0;
+			explodeSFX.Play ();
 			return;
 		}
 

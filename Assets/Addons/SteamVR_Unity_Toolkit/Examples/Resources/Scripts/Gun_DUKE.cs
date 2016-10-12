@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using VRTK;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ public class Gun_DUKE : VRTK_InteractableObject
 {
 	private GameObject bullet;
 	public GameObject shot;
-	public float bulletCount = 60;
+	public float bulletCount;
 	public TextMesh bulletNum;
 	private AudioSource gunSFX;
 	public float counter;
@@ -16,7 +17,7 @@ public class Gun_DUKE : VRTK_InteractableObject
     private float bulletLife = 5f;
 
 	[SerializeField]
-	GameObject resetObject;
+	GameObject resetObject, muzzleF;
 
     public override void StartUsing(GameObject usingObject)
     {
@@ -47,10 +48,11 @@ public class Gun_DUKE : VRTK_InteractableObject
 				counter += 4 * Time.deltaTime;
 				reloadBar.GetComponent<Scrollbar>().size = counter / reloadTime;
 
-				if(reloadBar.GetComponent<Scrollbar>().size == 1)
+				if(reloadBar.GetComponent<Scrollbar>().size >= 1)
 				{
 					reloadBar.SetActive (false);
-					bulletCount = 60;
+					bulletCount = 10;
+					counter = 0;
 				}
 			}
 		}
@@ -66,10 +68,18 @@ public class Gun_DUKE : VRTK_InteractableObject
 			//        rb.AddForce(-bullet.transform.forward * bulletSpeed);
 			Destroy(bulletClone, bulletLife);
 			gunSFX.Play ();
+			muzzleF.SetActive (true);
 			bulletCount--;
+			StartCoroutine(FlashCooldown());
 		}
 			
     }
+
+	IEnumerator FlashCooldown()
+	{
+		yield return new WaitForSeconds (0.4f);
+		muzzleF.SetActive (false);
+	}
 
 	public override void Ungrabbed(GameObject currentTouchingObject) {
 		base.Ungrabbed (currentTouchingObject);
@@ -77,4 +87,22 @@ public class Gun_DUKE : VRTK_InteractableObject
 		gameObject.transform.position = resetObject.GetComponent<Transform> ().position;
 		gameObject.transform.rotation = resetObject.GetComponent<Transform> ().rotation;
 	}
+
+//	void OnTriggerEnter(Collider hit)
+//	{
+//		if(hit.gameObject.tag == "Untagged")
+//		{
+//			gameObject.GetComponent<MeshRenderer> ().material.SetColor ("_EmissionColor", Color.green);
+//
+//		}
+//	}
+//
+//	void OnTriggerExit(Collider hit)
+//	{
+//		if(hit.gameObject.tag == "Untagged")
+//		{
+//			gameObject.GetComponent<MeshRenderer> ().material.SetColor ("_EmissionColor", Color.black);
+//
+//		}
+//	}
 }

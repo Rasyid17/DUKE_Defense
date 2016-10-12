@@ -271,6 +271,7 @@ namespace VRTK
                     {
                         var colorArray = BuildHighlightColorArray(color);
                         ChangeColor(colorArray);
+						gameObject.GetComponent<MeshRenderer> ().material.SetColor ("_EmissionColor", Color.green);
                     }
                 }
                 else
@@ -281,6 +282,8 @@ namespace VRTK
                         return;
                     }
                     ChangeColor(originalObjectColours);
+					gameObject.GetComponent<MeshRenderer> ().material.SetColor ("_EmissionColor", Color.black);
+
                 }
             }
         }

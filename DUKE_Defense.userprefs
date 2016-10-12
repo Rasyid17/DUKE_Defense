@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Addons\SteamVR_Unity_Toolkit\Scripts\VRTK_InteractableObject.cs">
     <Files>
-      <File FileName="Assets\Script\Enemy.cs" Line="75" Column="43" />
-      <File FileName="Assets\Script\HealthManager.cs" Line="10" Column="2" />
-      <File FileName="Assets\Script\DeviceHealth.cs" Line="11" Column="18" />
+      <File FileName="Assets\Script\DeviceHealth.cs" Line="77" Column="23" />
+      <File FileName="Assets\Script\ShotHIT.cs" Line="20" Column="33" />
+      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Examples\Resources\Scripts\Gun_DUKE.cs" Line="88" Column="60" />
+      <File FileName="Assets\Addons\SteamVR_Unity_Toolkit\Scripts\VRTK_InteractableObject.cs" Line="274" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

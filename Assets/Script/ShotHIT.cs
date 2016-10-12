@@ -4,6 +4,7 @@ using System.Collections;
 public class ShotHIT : MonoBehaviour {
 
 	public float damageZombie;
+	public GameObject bloodSplat;
 
 	void Start()
 	{
@@ -15,6 +16,8 @@ public class ShotHIT : MonoBehaviour {
 		if (hit.gameObject.tag == "Enemy") 
 		{
 			hit.gameObject.GetComponent<Enemy> ().ApplyDamage (damageZombie);
+			GameObject blood = GameObject.Instantiate(bloodSplat, transform.position, transform.rotation) as GameObject;
+			GameObject.Destroy(blood, 0.5f);
 			//Debug.Log ("HIT LA");
 		}
 
